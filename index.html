@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài Kiểm Tra IQ WMT-100 & Tư Duy Sáng Tạo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+
+  <section id="test1">
+    <header class="hero">
+      <span class="hero-tag">WMT-100</span>
+      <h1>Bài Kiểm Tra IQ Chuẩn Hóa</h1>
+      <p>Đề bốc ngẫu nhiên từ ngân hàng 100 câu hỏi · 15 câu · 20 phút</p>
+    </header>
+
+    <div class="timer" id="timer">⏱ Còn lại: <span id="time-display">20:00</span></div>
+
+    <div id="result-screen" class="result" hidden>
+      <h2>Hoàn thành bài thi IQ</h2>
+      <p class="muted">Kết quả đã được gửi về hệ thống.</p>
+      <div class="score-box">
+        <div id="res-score" class="res-line"></div>
+        <div id="res-iq" class="res-big"></div>
+        <div id="res-class" class="res-class"></div>
+        <div id="res-time" class="muted"></div>
+      </div>
+      <p class="muted"><em>▼ Vuốt xuống để xem đáp án chi tiết.</em></p>
+    </div>
+
+    <div id="quiz-form">
+      <div class="card info">
+        <div class="field"><label for="user_name">Họ và tên *</label>
+          <input id="user_name" type="text" placeholder="Nhập họ và tên..." required></div>
+        <div class="field"><label for="user_email">Email liên hệ *</label>
+          <input id="user_email" type="email" placeholder="Nhập email..." required></div>
+      </div>
+
+      <div class="progress-text" id="progress-text"></div>
+      <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+
+      <div id="questions-container"></div>
+      <button class="btn" id="btn-submit1">NỘP BÀI VÀ XEM KẾT QUẢ</button>
+    </div>
+  </section>
+
+  <div id="test2-launch" hidden>
+    <button class="btn btn-purple" id="btn-start2">LÀM TEST 2 – TRÍ SÁNG TẠO TSD-Z</button>
+  </div>
+
+  <section id="test2-wrapper" class="theme-purple" hidden>
+    <header class="hero">
+      <span class="hero-tag">TSD-Z</span>
+      <h1>Trắc Nghiệm Tư Duy Sáng Tạo</h1>
+      <p>Ngân hàng 100 câu · Mỗi lượt 33 câu ngẫu nhiên · 15 phút</p>
+    </header>
+    <p class="note"><strong>Lưu ý:</strong> Đây là bài trắc nghiệm mô phỏng các thành tố tư duy sáng tạo của TSD-Z (Urban), không phải biểu mẫu TSD-Z chính thức. TSD-Z chuẩn là bài vẽ, chấm theo 14 tiêu chí.</p>
+
+    <div class="score-guide">
+      <span><b>Thấp (A)</b><br>&lt; 16</span>
+      <span><b>Dưới TB (B)</b><br>16–20</span>
+      <span><b>Trung bình (C)</b><br>21–33</span>
+    </div>
+
+    <div class="timer" id="test2-timer">⏱ Còn lại: <span id="test2-time-display">15:00</span></div>
+    <div class="progress-text" id="test2-progress-text"></div>
+    <div class="progress"><div class="progress-bar" id="test2-progress-bar"></div></div>
+
+    <div id="test2-questions-container"></div>
+    <button class="btn btn-purple" id="btn-submit2">NỘP TEST 2 VÀ XEM KẾT QUẢ</button>
+
+    <div id="test2-result" class="result" hidden>
+      <div class="score-box">
+        <h2>Kết quả Test 2</h2>
+        <div id="test2-res-score" class="res-line"></div>
+        <div id="test2-res-class" class="res-big"></div>
+        <div id="test2-res-time" class="muted"></div>
+      </div>
+      <p class="muted">Chỉ phản ánh điểm bài trắc nghiệm mô phỏng, không phải chẩn đoán TSD-Z chuẩn hóa.</p>
+    </div>
+  </section>
+</main>
+
+<script src="data-iq.js"></script>
+<script src="data-creative.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
