@@ -140,7 +140,7 @@ function startTest2(){
   if(t2Started) return; t2Started=true;
   $('test2-launch').hidden=true;
   $('test2-wrapper').hidden=false;
-  t2Questions=shuffleArray(creativeQuestionBank100).slice(0,33).map(prepare);
+  t2Questions=shuffleArray(creativeQuestionBank100).slice(0,32).map(prepare);
   renderQuestions($('test2-questions-container'),t2Questions,'t2q','test2-q-card-','',
     q=>`<span class="badge">${q.cat}</span>`,
     ()=>updateProgress(t2Questions,'t2q','test2-q-card-','test2-progress-bar','test2-progress-text'));
